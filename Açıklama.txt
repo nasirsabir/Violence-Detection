@@ -1,0 +1,31 @@
+Projenin Çalıştırma Adımları:
+
+	1. Feature Extraction
+		İlk olarak "feature_extraction_1.py" dosyasını çalıştırınız. 
+		İndirdiğiniz HockeyFight verisetinin yolunu değiştirmeyi unutmayınız
+
+	Bu adımda, 'dataset' klasöründe link olarak paylaşılan ve indirilmesi gereken video veri setleri framelere bölünür. Ardından VGG16 modeli kullanılarak feature extraction (özellik çıkarımı) işlemi gerçekleştirilir. Bu adımın sonunda, 'train.h5' ve 'test.h5' adında iki adet özellik çıkarımı yapılmış, modele verilmeye hazır veri seti dosyaları oluşturulur.
+
+
+	2. Model Eğitimi
+		İkinci olarak "train_model_2.py" dosyasını çalıştırınız. 
+
+	Bu adımda, hazırlanan 'train.h5' ve 'test.h5' dosyaları okunarak modele verilir. Model eğitilir ve aynı zamanda test edilir. Bu aşamada, modelin başarım sonuçlarını gözlemleyebilirsiniz.
+
+
+	Dış Veri İle Deneme Adımları:
+		Eğer sonuçları dışarıdan bir veri ile denemek isterseniz aşağıdaki adımları izleyebilirsiniz. Bunun için indirdiğiniz veri setinden bir kısmını bu işlem için ayırmanızı öneririz.
+
+
+	3. Dış Veriden Özellik Çıkarımı
+		Üçüncü olarak "feature_extraction_of_external_data_3.py" dosyasını çalıştırınız. 
+		Verisetinden ayıracağınız videoları tek klasörde topladıktan sonra 13.satıra dosya yolunu giriniz
+
+	Bu adımda, dışarıdan veri olarak vereceğiniz videolara tekrar frame extraction ve feature extraction adımları uygulanır.
+
+
+	4. Dış Veri Üzerinde Tahmin
+		Dördüncü olarak "prediction_of_external_data_4.py" dosyasını çalıştırınız. 
+		Verisetinden ayıracağınız videoları tek klasörde topladıktan sonra 16.satıra dosya yolunu giriniz
+	
+	İkinci adımda eğitilen modeli burada yükleyerek hazırladığınız dış veriyi modele tahmin etmesi için veriniz. Bu adımda, modelin dış veriler üzerinde nasıl bir başarım gerçekleştirdiğini analiz edebilirsiniz.

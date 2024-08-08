@@ -1,0 +1,5 @@
+Hockey Fight Dataset:
+https://www.kaggle.com/code/yassershrief/violence-detection-hockey-fight-cnn-lstm/input
+
+Smart-City CCTV Violence Detection Dataset (SCVD):
+https://www.kaggle.com/datasets/toluwaniaremu/smartcity-cctv-violence-detection-dataset-scvd
